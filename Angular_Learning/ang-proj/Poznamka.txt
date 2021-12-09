@@ -1,0 +1,15 @@
+Komponenta
+- prvni {root -> app.component} 
+    -.html -> sablona
+    -.scss / .css -> styly
+    -.ts -> komponenta/classa
+    -.spec.ts -> testovaci soubor
+
+Modul
+- app.module.ts
+- app-routing.module.ts
+
+
+Binding
+- z .ts do html -> zobrazeni textu [], priklad: [style.color]="color" -- Property Binding
+- z .html do .ts -> zmacknuti tlacitko (), priklad: (click)  -- Event Binding

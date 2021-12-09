@@ -1,0 +1,20 @@
+Skoleni Angular
+1. Den typescript/javascript
+npm install -D ts-node
+npm install -D typescript
+
+set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+Get-ExecutionPolicy
+
+./node_modules/.bin/ts-node
+./node_modules/typescript/bin/tsc
+
+\AppData\Roaming\npm
+
+
+EcmaScript
+
+2. Angular
+ng new ang-proj --routing --skip-git --skip-tests --style scss
+npm i
+ng serve

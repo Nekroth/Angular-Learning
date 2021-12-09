@@ -1,0 +1,58 @@
+<p>test1 works!</p>
+<p>{{ myParagraph }}</p>
+<p>{{ condition ? 'Ano' : 'Ne'}}</p>
+<div>
+    <button (click)="changeParagraph()">Change Paragraph</button>
+
+    <button (click)="changeCondition()">Change Condition</button>
+</div>
+
+<div>
+    <span [style.color]="color">Colored text</span>
+    <br>
+    <span class="my-class">Colored text</span>
+    <br>
+    <span [class.my-class2]="condition">Blue text : {{condition}}</span>
+    <br>
+    <p class="bold-text" [ngClass]="paragraphClass">ng class paragraph : {{paragraphClass}}</p>
+</div>
+
+<div>
+    <p *ngIf="condition">Condition is true</p>
+    <p *ngIf="!condition">Condition is false</p>
+</div>
+
+
+<div>
+    <button (click)="addPerson()">Add Person</button>
+</div>
+
+<div>
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+        </tr>
+        <tr *ngFor="let p of people">
+            <td>{{p.firstName}}</td>
+            <td>{{p.lastName}}</td>
+            <td>{{p.age ? p.age : '-'}}</td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <button (click)="incrementCounter()">Increment Button</button>
+    <p>{{counter}}</p>
+    <div [ngSwitch]="counter">
+        <div *ngSwitchCase="0">Zero</div>
+        <div *ngSwitchCase="1">One</div>
+        <div *ngSwitchCase="2">Two</div>
+        <div *ngSwitchDefault>More than two</div>
+    </div>
+</div>
+
+<img [src]="imageURL">
+<br>
+<a [href]="website" target="_blank">{{website}}</a>

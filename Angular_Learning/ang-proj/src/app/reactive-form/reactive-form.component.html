@@ -1,0 +1,15 @@
+<form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+    <label>Username</label>
+    <input type="text" formControlName="login">
+    <!--<div *ngIf="form.submitted || loginForm.get('login').invalid">Login Error: {{loginForm.get('login')?.errors | json}}</div>  TODO NOT WORKING-->
+    
+
+    <br>
+
+    <label>Password</label>
+    <input type="password" formControlName="password">
+
+    <br>
+    <button type="submit">Submit</button>
+
+</form>

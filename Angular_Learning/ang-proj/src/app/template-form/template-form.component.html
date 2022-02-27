@@ -1,0 +1,42 @@
+<form *ngIf="!isLoggedIn" #loginForm="ngForm" (ngSubmit)="submitForm(loginForm)">
+    
+    <label>Username</label>
+    <input #username="ngModel" name="username" type="text" [(ngModel)]="loginFormModel.username" required maxlength="10" pattern="[a-z]+">
+    <div *ngIf="(loginForm.submitted || username.touched) && username.invalid && username.errors">
+        <!--<p style="color: red;">Username is required. {{username.errors | json}}</p>-->
+        <p style="color: red;" *ngIf="username.errors['required']">Username is required</p>
+        <p style="color: red;" *ngIf="username.errors['pattern']">User name can only have lowercase letters.</p>
+    </div>
+
+    <br>
+
+    <label>Password</label>
+    <input #passwordcontrol="ngModel" name="password" type="password" [(ngModel)]="loginFormModel.password" required>
+    <div *ngIf="(loginForm.submitted || passwordcontrol.touched) && passwordcontrol.invalid">
+        <p style="color: red;">Password is required</p>
+    </div>
+
+    <br>
+
+    <select [(ngModel)]="loginFormModel.serverId" name="serverIdSelect"> 
+        <option *ngFor="let s of servers" [ngValue]="s.id">{{s.name}}</option>
+    </select>
+    <br>
+
+    <select [(ngModel)]="loginFormModel.server" name="serverObjSelect" [compareWith]="compareServers"> 
+        <option *ngFor="let s of servers" [ngValue]="s">{{s.name}}</option>
+    </select>
+
+    <br>
+
+    <button type="submit">Submit</button>
+
+    <br>
+
+
+</form>
+
+<div *ngIf="isLoggedIn">
+    <p>User logged in</p>
+    <button (click)="logout()">Logout</button>
+</div>

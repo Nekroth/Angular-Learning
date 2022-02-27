@@ -1,2 +1,19 @@
+ <header>
+     <nav>
+         <a routerLink="/test1">test1</a>
+         <a routerLink="/template-form">Template Form</a>
+         <a routerLink="/reactive-form">Reactive Form</a>
+     </nav>
+ </header>
+ 
  <p>Hello world</p>
-  <app-test1></app-test1>
+ <p *ngIf=loggedIn> Hello welcome {{username}}</p>
+  <!--<app-test1></app-test1>-->
+  <!--<app-template-form></app-template-form>-->
+  <!--<app-reactive-form></app-reactive-form>-->
+
+  <router-outlet></router-outlet>
+
+  <footer>
+      Footer
+  </footer>

@@ -13,3 +13,28 @@ Modul
 Binding
 - z .ts do html -> zobrazeni textu [], priklad: [style.color]="color" -- Property Binding
 - z .html do .ts -> zmacknuti tlacitko (), priklad: (click)  -- Event Binding
+- -- Obousmerny Binding
+
+Komunikace mezi komponenty 
+-@Input()
+-@Output()
+- [()]
+
+Formulare
+- template form - ngModel, .ts objekt, validace .html
+- reactive form - polozky formulare .ts v .html zobrazeni
+
+Service
+-trida, singleton
+-pripojeni na api
+-sprava prihlaseni
+-transformace dat
+- .ts soubor
+
+Params 
+- query params = udaj&udaj
+- path params = /udaj
+- ActivatedRoute
+- params je vzdy string
+
+api

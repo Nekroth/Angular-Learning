@@ -33,6 +33,11 @@ export class Test1Component implements OnInit {
     {
       firstName: "Ivana",
       lastName: "Zelena",
+    },
+    {
+      firstName: "Martin",
+      lastName: "Test",
+      age: 50
     }
   ];
   //pokud pouzivam ze sablony , musi byt public
@@ -41,6 +46,7 @@ export class Test1Component implements OnInit {
   counter:number = 0;
   imageURL: string = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstories.wimp.com%2Fwp-content%2Fuploads%2F2020%2F09%2FUntitled-collage-copy-4-1024x536.png&f=1&nofb=1';
   website: string = 'https://www.root.cz';
+  parentMessage: string = 'First message';
 
   constructor() { }
 
@@ -66,6 +72,9 @@ export class Test1Component implements OnInit {
 
   incrementCounter(): void {
     this.counter++;
+  }
+  processButtonClick(message: string) {
+    console.log("event received:", message);
   }
 
   get color(): string {

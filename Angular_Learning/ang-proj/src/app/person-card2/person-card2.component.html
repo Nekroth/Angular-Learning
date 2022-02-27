@@ -1,0 +1,8 @@
+<div *ngIf="person" class="person-card2">
+    <p *ngIf="person.firstName">Jmeno: {{person.firstName}}</p>
+    <p *ngIf="person.lastName">Prijmeni: {{person.lastName}}</p>
+    <p *ngIf="person.age">Vek: {{person.age}}</p>
+    <button (click)="emitEvent()">Button</button>
+    <p>{{message}}</p>
+    <button (click)="changeMessage()">Change Message</button>
+</div>

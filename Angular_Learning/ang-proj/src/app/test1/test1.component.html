@@ -53,6 +53,16 @@
     </div>
 </div>
 
-<img [src]="imageURL">
+<!--<img [src]="imageURL">
 <br>
-<a [href]="website" target="_blank">{{website}}</a>
+<a [href]="website" target="_blank">{{website}}</a> -->
+
+<!--<app-person-card *ngFor="let p of people" [firstName]="p.firstName" 
+[lastName]="p.lastName" [age]="p.age"></app-person-card>-->
+<p>{{parentMessage}}</p>
+
+<app-person-card2 *ngFor="let p of people" [person]="p" 
+(onButtonClick)="processButtonClick($event)" [(message)]="parentMessage"
+
+>
+</app-person-card2>
